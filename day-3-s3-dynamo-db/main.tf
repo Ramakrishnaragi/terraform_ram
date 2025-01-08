@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "s3-test" {
 }
 
 resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
-  name = "terraform-state-lock-dynamo"
+  name = "terraform-state-lock-dynamo-1"
   hash_key = "LockID"
   read_capacity = 20
   write_capacity = 20
