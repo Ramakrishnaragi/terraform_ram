@@ -3,7 +3,7 @@ resource "aws_instance" "name" {
   instance_type = "t2.nano"
   key_name      = "mumbai"
 tags ={
-  Name= "ram-3"
+  Name= "ram-4"
   }
 }
 
