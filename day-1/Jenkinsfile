@@ -1,0 +1,31 @@
+pipeline{
+    agent any
+    stages{
+        stage('checkout'){
+            steps{
+                git branch: 'main' ,url: 'https://github.com/Ramakrishnaragi/terraform_ram.git'
+            }
+        }
+        stage('init'){
+            steps{
+                dir('day-1'){
+                    sh 'terraform init'
+                }
+            }
+        }
+        stage('plan'){
+            steps{
+                dir('day-1'){
+                    sh 'terraform plan'
+                }
+            }
+        }
+        // stage('apply'){
+        //     steps{
+        //         dir('day-1'){
+        //             sh 'terraform  -auto-approve'
+        //         }
+        //     }
+        // }
+    }
+}
